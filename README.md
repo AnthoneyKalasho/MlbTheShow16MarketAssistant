@@ -1,5 +1,5 @@
 # Mlb The Show 16 Market Assistant
-This is a tool to assist users in trading on the market in PS4 game "MLB The Show 16". The program crawls www.theshownation.com and gathers the data for a player's buy and sell now prices into a list that can be filtered to help the user find which card is best for them to flip on the market. Heres a quick demonstration of the program [ADD LINK HERE]
+This is a tool to assist users in trading on the market in PS4 game "MLB The Show 16". The program crawls www.theshownation.com and gathers the data for a player's buy and sell now prices into a list that can be filtered to help the user find which card is best for them to flip on the market. Heres a quick demonstration of the program https://www.youtube.com/watch?v=M1anP-uuKd8
 
 
 ## Installation
