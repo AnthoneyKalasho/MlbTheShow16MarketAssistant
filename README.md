@@ -8,6 +8,7 @@ This is a tool to assist users in trading on the market in PS4 game "MLB The Sho
   * https://java.com/en/download/
 2. Download the latest version of the program
   * [v1.0](https://sourceforge.net/projects/mlbtheshow16marketassistant/files/MLB%20The%20Show%2016%20Market%20Assistant%20v1.0.jar/download)
+3. Run it!
 
 ## Contributing
 
@@ -24,6 +25,13 @@ This is a tool to assist users in trading on the market in PS4 game "MLB The Sho
 ## To Do List
   * Getting other card series working
   * Clean up code (It is horrid, don't look)
+
+## Donating
+I spent a lot of time on this so if you enjoy it and would like to donate, you can donate to
+
+PayPal: AnthoneyKalasho@Gmail.com
+
+Thanks and I hope you find the program useful!
 
 ## License
 
