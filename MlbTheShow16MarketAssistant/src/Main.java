@@ -54,7 +54,7 @@ public class Main {
 	private static ArrayList<String> allMatches = new ArrayList<String>();
 	private static ArrayList<PlayerCard> allCards = new ArrayList<PlayerCard>();
 	private static List<String> allMatchesOnPage = new ArrayList<String>();
-	private static String[] columnNames = {"Ovr", "Name", "Team","Series" ,"Buy Now", "Sell Now", "Buy - Sell", "% Difference"};
+	private static String[] columnNames = {"Ovr", "Name", "Team","Series" ,"Buy Now", "Sell Now", "Buy - Sell (w/Tax)", "% Difference"};
 	private static String[] comboItems = {"Live Series"};
 	private static Object[][] data ={};
     private static DefaultTableModel model = new DefaultTableModel(data,columnNames);
@@ -99,7 +99,7 @@ public class Main {
 					
 			        
 
-					frame = new JFrame("MLB The Show 16 Market Assistant");
+					frame = new JFrame("MLB The Show 16 Market Assistant v1.01");
 					frame.setSize(1200,560);
 					//930 520
 				    table = new JTable(model){
@@ -428,12 +428,12 @@ public class Main {
 			            }
 
 			        });
-				    rowSorter.setComparator(6, new Comparator<Integer>() {
+				    rowSorter.setComparator(6, new Comparator<Float>() {
 
 			            @Override
-			            public int compare(Integer o1, Integer o2)
+			            public int compare(Float o1, Float o2)
 			            {
-			                return o2 - o1;
+			                return (int) (o2 - o1);
 			            }
 
 			        });
@@ -658,8 +658,14 @@ public class Main {
 	  					blankPg=i-1;
 	          		    zeroResults=1;
 	  					for(String currentMatch : allMatchesOnPage){
+	  						
+	  						
+	  						
+	  						
 	  						PlayerCard tempCard=toPlayerCard(currentMatch);
-	  						percentDiff = (float)((((double)tempCard.getBuyNow()-(double)tempCard.getSellNow())/(double)tempCard.getSellNow())*100);
+	  						float difAfterTax = (float)((((double)tempCard.getBuyNow())-((double)tempCard.getBuyNow())* .1)-(double)tempCard.getSellNow());
+	  						difAfterTax = round(difAfterTax,2);
+	  						percentDiff = (float)(((double)difAfterTax/(double)tempCard.getSellNow())*100);
 	  						percentDiff = round(percentDiff,2);
 	  						perDif = (Float)percentDiff;
 	  						perDifStr = Float.toString(perDif);
@@ -669,7 +675,7 @@ public class Main {
 	  						if (tempCard.getSellNow()==0) {
 	  							perDifStr = "N/A";
 	  						}
-	  						model.addRow(new Object[]{(Integer)tempCard.getCardRank(),tempCard.getName(),tempCard.getTeam(),"Live Series",(Integer)tempCard.getBuyNow(),(Integer)tempCard.getSellNow(),(Integer)tempCard.getBuyNow()-(Integer)tempCard.getSellNow(),perDifStr});
+	  						model.addRow(new Object[]{(Integer)tempCard.getCardRank(),tempCard.getName(),tempCard.getTeam(),"Live Series",(Integer)tempCard.getBuyNow(),(Integer)tempCard.getSellNow(),difAfterTax,perDifStr});
 	  						allCards.add(tempCard);
 	  							
 	  					}
