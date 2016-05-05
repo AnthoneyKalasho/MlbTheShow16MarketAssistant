@@ -101,7 +101,7 @@ public class Main {
 
 					frame = new JFrame("MLB The Show 16 Market Assistant v1.01");
 					frame.setSize(1200,560);
-					//930 520
+					//930 521
 				    table = new JTable(model){
 			            /**
 						 * 
