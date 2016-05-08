@@ -7,10 +7,24 @@ This is a tool to assist users in trading on the market in PS4 game "MLB The Sho
 1. Install Java if you do not already have it
   * https://java.com/en/download/
 2. Download the latest version of the program
+  * [v1.02](https://sourceforge.net/projects/mlbtheshow16marketassistant/files/MLB%20The%20Show%2016%20Market%20Assistant%20v1.02.jar/download)  
   * [v1.01](https://sourceforge.net/projects/mlbtheshow16marketassistant/files/MLB%20The%20Show%2016%20Market%20Assistant%20v1.01.jar/download)  
   * [v1.0](https://sourceforge.net/projects/mlbtheshow16marketassistant/files/MLB%20The%20Show%2016%20Market%20Assistant%20v1.0.jar/download)
  
 3. Run it!
+
+
+## History
+  * v1.02
+    * Added "Quick Refresh" button. Only refreshes pages that are included in the last filter you used.
+    * Added page number column (Page number on http://theshownation.com/market?series_id=1337)
+  * v1.01
+    * Now Accounts for tax in "Buy - Sell" and "% Difference" columns
+
+## To Do List
+  * Getting other card series working
+  * Add filter for player name, page number
+  * Clean up code (It is horrid, don't look)
 
 ## Contributing
 
@@ -20,14 +34,6 @@ This is a tool to assist users in trading on the market in PS4 game "MLB The Sho
 4. Push to the branch: `git push origin my-new-feature`
 5. Submit a pull request :D
 
-## History
-
-  * v1.01
-    * Now Accounts for tax in "Buy - Sell" and "% Difference" columns
-
-## To Do List
-  * Getting other card series working
-  * Clean up code (It is horrid, don't look)
 
 ## Donating
 I spent a lot of time on this so if you enjoy it and would like to donate, you can donate to
